@@ -3,16 +3,6 @@ Before doing any of this
 - make sure http(s)_proxy environment vars are set to get past corp proxy (using CNTLM).
 - Vagrant proxyconf plugin installed and configured
  (HOME/.vagrant.d/Vagrantfile)
-**
- Vagrant.configure("2") do |config|
-   config.vm.box_download_insecure = true
-   if Vagrant.has_plugin?("vagrant-proxyconf")
-     config.proxy.http     = "http://10.0.2.2:3128"
-     config.proxy.https    = "http://10.0.2.2:3128"
-     config.proxy.no_proxy = "localhost,127.0.0.*,10.*,192.168.*,172.*,*.paychex.com,*.pxlabus.com"
-   end
- end
-**
 
 
 To start VM....
